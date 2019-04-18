@@ -1,5 +1,5 @@
 #!/bin/bash
-containers=`/rootfs/usr/bin/docker ps -a | awk '{if (NR!=1) {print}}' | awk '{print $1}'`
+containers=`/rootfs/usr/bin/docker ps -a -q`
 name=`/rootfs/usr/bin/docker ps | awk '{if (NR!=1) {print}}' | awk '{print $NF}'`
 
 echo '{
